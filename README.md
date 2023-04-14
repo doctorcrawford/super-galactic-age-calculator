@@ -1,6 +1,6 @@
-# (Application Name)
+# Super Galactic Age Calculator
 
-#### (Brief Description of Application)
+#### An application that determines a user's age based on a planet's solar years.
 
 #### By Kyle Crawford
 
@@ -18,12 +18,10 @@
 * CSS
 * Javascript
 * Git
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
 
 ## Description
+
+This application takes a user's name and date of birth, calculates their age in years not only on earth, but also relative to other planet's years. It also will calculate how many years it's been, or years until an inputted age relative to the user's age.
 
 ## Setup/Installation Requirements
 
@@ -32,16 +30,11 @@
 * Start a development server with $ npm run start
 * Lint JS files in the src folder with $ npm run lint
 * Run tests with Jest using $ npm run test
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
 
 ## Known Bugs
 
 * _Any known issues_
-* _should go here_
+
 
 ## License
 [MIT](https://opensource.org/license/mit/)

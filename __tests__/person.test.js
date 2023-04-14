@@ -19,9 +19,9 @@ describe('Person', () => {
     expect(ages.ageEarth).toEqual(32);
   });
 
-  // test('should correctly calculate the persons age in Mercury years', () => {
-  //   expect(ages.ageMercury).toEqual(129.17);
-  // });
+  test('should correctly calculate the persons age in Mercury years', () => {
+    expect(ages.ageMercury).toEqual(133.33);
+  });
 
   // test('should correctly calculate the persons age in years for Mercury, venus, mars and jupiter', () => {
   //   expect(ages.ageMercury).toEqual(129.17);

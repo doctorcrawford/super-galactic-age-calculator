@@ -2,28 +2,27 @@ import Person from './../src/js/person.js';
 
 describe('Person', () => {
   let billy;
-  let solarYears;
+  let ages;
   
   beforeEach(() => {
-    billy = new Person("Billy", 31);
-    let solarYears = {};
-    solarYears = billy.getSolarYears();
+    billy = new Person("Billy", );
+    ages = {};
+    ages = billy.getSolarYears();
   });
   
-  test('should correctly create a Person object with their name and age', () => {
+  test('should correctly create a Person object with their name and date of birth', () => {
     expect(billy.name).toEqual("Billy");
-    expect(billy.age).toEqual(31);
+    expect(billy.dob).toEqual("Sat Mar 16 1991 00:00:00 GMT-0800 (Pacific Standard Time)");
   });
 
   test('should correctly calculate the persons age in Mercury years', () => {
-    console.log("the return" + "solarYears");
-    expect(solarYears.ageMercury).toEqual(129.17);
+    expect(ages.ageMercury).toEqual(129.17);
   });
 
   test('should correctly calculate the persons age in years for Mercury, venus, mars and jupiter', () => {
-    expect(solarYears.ageMercury).toEqual(129.17);
-    expect(solarYears.ageVenus).toEqual(50);
-    expect(solarYears.ageMars).toEqual(16.49);
-    expect(solarYears.ageJupiter).toEqual(2.61);
+    expect(ages.ageMercury).toEqual(129.17);
+    expect(ages.ageVenus).toEqual(50);
+    expect(ages.ageMars).toEqual(16.49);
+    expect(ages.ageJupiter).toEqual(2.61);
   });
 });

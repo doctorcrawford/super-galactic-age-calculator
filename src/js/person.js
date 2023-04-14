@@ -26,7 +26,10 @@ export default class Person {
     const output = {};
     const ages = this.getAges();
     output.passedEarth = ages.ageEarth - pastAge;
- 
+    output.passedMercury = parseFloat(((output.passedEarth) / .24).toFixed(2));
+    output.passedVenus = parseFloat(((output.passedEarth) / .62).toFixed(2));
+    output.passedMars = parseFloat(((output.passedEarth) / 1.88).toFixed(2));
+    output.passedJupiter = parseFloat(((output.passedEarth) / 11.86).toFixed(2));
     return output;
   }
 }

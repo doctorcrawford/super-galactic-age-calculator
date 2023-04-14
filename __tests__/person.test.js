@@ -5,7 +5,7 @@ describe('Person', () => {
   let ages;
   
   beforeEach(() => {
-    billy = new Person("Billy", );
+    billy = new Person("Billy", [4, 14, 1991]);
     ages = {};
     ages = billy.getSolarYears();
   });

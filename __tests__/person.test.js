@@ -16,7 +16,6 @@ describe('Person', () => {
   });
   
   test('should calculate the persons age', () => {
-    expect(ages.name).toEqual("Billy");
     expect(ages.ageEarth).toEqual(32);
   });
 

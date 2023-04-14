@@ -3,15 +3,14 @@ import Person from './../src/js/person.js';
 describe('Person', () => {
   let billy;
   let ages;
-  let passedAges;
+  let agesDiff;
 
   
   beforeEach(() => {
     billy = new Person("Billy", [4, 14, 1991]);
     ages = {};
     ages = billy.getAges();
-    passedAges = {};
-    passedAges = billy.getYearsPassed(10);
+    agesDiff = {};
   });
   
   test('should correctly create a Person object with their name and date of birth', () => {
@@ -35,13 +34,20 @@ describe('Person', () => {
   });
 
   test('should correctly calculate the years passed from the inputted age to today', () => {
-    expect(passedAges.passedEarth).toEqual(22);
+    agesDiff = billy.getYearsDiff(10);
+    expect(agesDiff.earthDiff).toEqual(22);
   });
 
   test('should correctly calculate the years passed for all planets from the inputted age to today', () => {
-    expect(passedAges.passedMercury).toEqual(91.67);
-    expect(passedAges.passedVenus).toEqual(35.48);
-    expect(passedAges.passedMars).toEqual(11.7);
-    expect(passedAges.passedJupiter).toEqual(1.85);
+    agesDiff = billy.getYearsDiff(10);
+    expect(agesDiff.mercuryDiff).toEqual(91.67);
+    expect(agesDiff.venusDiff).toEqual(35.48);
+    expect(agesDiff.marsDiff).toEqual(11.7);
+    expect(agesDiff.jupiterDiff).toEqual(1.85);
+  });
+
+  test('should correctly calculate the years until a future birthday for earth', () => {
+    agesDiff = billy.getYearsDiff(42);
+    expect(agesDiff.earthDiff).toEqual(10);
   });
 });

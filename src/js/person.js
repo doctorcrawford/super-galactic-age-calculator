@@ -22,14 +22,19 @@ export default class Person {
     return output;
   }
 
-  getYearsPassed(pastAge) {
+  getYearsDiff(yearsOff) {
     const output = {};
     const ages = this.getAges();
-    output.passedEarth = ages.ageEarth - pastAge;
-    output.passedMercury = parseFloat(((output.passedEarth) / .24).toFixed(2));
-    output.passedVenus = parseFloat(((output.passedEarth) / .62).toFixed(2));
-    output.passedMars = parseFloat(((output.passedEarth) / 1.88).toFixed(2));
-    output.passedJupiter = parseFloat(((output.passedEarth) / 11.86).toFixed(2));
+    const ageDiff = ages.ageEarth - yearsOff;
+    if (ageDiff > 0){
+      output.earthDiff = ageDiff;
+    } else if (ageDiff < 0) {
+      output.earthDiff = -(ageDiff);
+    }
+    output.mercuryDiff = parseFloat(((output.earthDiff) / .24).toFixed(2));
+    output.venusDiff = parseFloat(((output.earthDiff) / .62).toFixed(2));
+    output.marsDiff = parseFloat(((output.earthDiff) / 1.88).toFixed(2));
+    output.jupiterDiff = parseFloat(((output.earthDiff) / 11.86).toFixed(2));
     return output;
   }
 }

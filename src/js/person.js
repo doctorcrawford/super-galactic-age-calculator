@@ -14,9 +14,9 @@ export default class Person {
     const today = new Date();
     output.ageEarth = today.getFullYear() - this.dob.getFullYear();
     output.ageMercury = parseFloat((output.ageEarth / .24).toFixed(2));
-    // output.ageVenus = parseFloat((this.age / .62).toFixed(2));
-    // output.ageMars = parseFloat((this.age / 1.88).toFixed(2));
-    // output.ageJupiter = parseFloat((this.age / 11.86).toFixed(2));
+    output.ageVenus = parseFloat((output.ageEarth / .62).toFixed(2));
+    output.ageMars = parseFloat((output.ageEarth / 1.88).toFixed(2));
+    output.ageJupiter = parseFloat((output.ageEarth / 11.86).toFixed(2));
     return output;
   }
 }

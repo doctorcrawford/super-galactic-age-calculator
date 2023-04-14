@@ -23,10 +23,10 @@ describe('Person', () => {
     expect(ages.ageMercury).toEqual(133.33);
   });
 
-  // test('should correctly calculate the persons age in years for Mercury, venus, mars and jupiter', () => {
-  //   expect(ages.ageMercury).toEqual(129.17);
-  //   expect(ages.ageVenus).toEqual(50);
-  //   expect(ages.ageMars).toEqual(16.49);
-  //   expect(ages.ageJupiter).toEqual(2.61);
-  // });
+  test('should correctly calculate the persons age in years for Mercury, venus, mars and jupiter', () => {
+    expect(ages.ageMercury).toEqual(133.33);
+    expect(ages.ageVenus).toEqual(51.61);
+    expect(ages.ageMars).toEqual(17.02);
+    expect(ages.ageJupiter).toEqual(2.70);
+  });
 });

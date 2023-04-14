@@ -12,7 +12,7 @@ describe('Person', () => {
   
   test('should correctly create a Person object with their name and date of birth', () => {
     expect(billy.name).toEqual("Billy");
-    expect(billy.dob).toEqual("Sat Mar 16 1991 00:00:00 GMT-0800 (Pacific Standard Time)");
+    expect(billy.dob.getFullYear()).toEqual(1991);
   });
 
   test('should correctly calculate the persons age in Mercury years', () => {

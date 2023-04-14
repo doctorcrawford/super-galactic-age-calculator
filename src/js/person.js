@@ -5,7 +5,7 @@ export default class Person {
 
   constructor(name, dob) {
     this.name = name;
-    this.dob = dob;
+    this.dob = new Date(dob);
   }
 
   getAge() {

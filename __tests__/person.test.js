@@ -3,11 +3,14 @@ import Person from './../src/js/person.js';
 describe('Person', () => {
   let billy;
   let ages;
+  let passedAges;
+
   
   beforeEach(() => {
     billy = new Person("Billy", [4, 14, 1991]);
     ages = {};
     ages = billy.getAges();
+    passedAges = {};
   });
   
   test('should correctly create a Person object with their name and date of birth', () => {
@@ -31,6 +34,7 @@ describe('Person', () => {
   });
 
   test('should correctly calculate the years passed from the inputted age to today', () => {
-    expect(ages.passedEarth).toEqual(10);
+    passedAges = billy.getYearsPassed(ages.ageEarth, 10);
+    expect(passedAges.passedEarth).toEqual(22);
   });
 });

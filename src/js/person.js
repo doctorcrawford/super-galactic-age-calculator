@@ -1,6 +1,5 @@
 export default class Person {
   name = "";
-
   age = undefined;
 
   constructor(name, dob) {
@@ -20,9 +19,8 @@ export default class Person {
     return output;
   }
 
-  getYearsPassed(pastAge) {
+  getYearsPassed() {
     const output = {};
-
     return output;
   }
 }

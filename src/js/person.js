@@ -19,4 +19,10 @@ export default class Person {
     output.ageJupiter = parseFloat((output.ageEarth / 11.86).toFixed(2));
     return output;
   }
+
+  getYearsPassed(pastAge) {
+    const output = {};
+
+    return output;
+  }
 }

@@ -29,4 +29,8 @@ describe('Person', () => {
     expect(ages.ageMars).toEqual(17.02);
     expect(ages.ageJupiter).toEqual(2.70);
   });
+
+  test('should correctly calculate the years passed from the inputted age to today', () => {
+    expect(ages.passedEarth).toEqual(10);
+  });
 });

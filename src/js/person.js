@@ -7,10 +7,6 @@ export default class Person {
     this.dob = new Date(dob);
   }
 
-  // twoDecimals(age, planetYear) {
-  //   parseFloat(age / planetYear).toFixed(2);
-  // }
-
   getAges() {
     const output = {};
     const today = new Date();

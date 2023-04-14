@@ -19,8 +19,9 @@ export default class Person {
     return output;
   }
 
-  getYearsPassed() {
+  getYearsPassed(ageEarth, pastAge) {
     const output = {};
+    output.passedEarth = ageEarth - pastAge;
     return output;
   }
 }

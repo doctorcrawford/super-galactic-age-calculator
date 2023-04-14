@@ -34,7 +34,15 @@ describe('Person', () => {
   });
 
   test('should correctly calculate the years passed from the inputted age to today', () => {
-    passedAges = billy.getYearsPassed(ages.ageEarth, 10);
+    passedAges = billy.getYearsPassed(10);
     expect(passedAges.passedEarth).toEqual(22);
   });
+
+  // test('should correctly calculate the years passed from the inputted age to today', () => {
+  //   passedAges = billy.getYearsPassed(ages.ageEarth, 10);
+  //   expect(passedAges.passedMercury).toEqual(22);
+  //   expect(passedAges.passedVenus).toEqual(22);
+  //   expect(passedAges.passedMars).toEqual(22);
+  //   expect(passedAges.passedJupiter).toEqual(22);
+  // });
 });

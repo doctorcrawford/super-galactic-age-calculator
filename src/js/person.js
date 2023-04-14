@@ -19,9 +19,14 @@ export default class Person {
     return output;
   }
 
-  getYearsPassed(ageEarth, pastAge) {
+  getYearsPassed(pastAge) {
     const output = {};
-    output.passedEarth = ageEarth - pastAge;
+    const ages = this.getAges();
+    output.passedEarth = ages.ageEarth - pastAge;
+    // output.passedMercury = ages.ageMercury - pastAge;
+    // output.passedVenus = ages.ageVenus - pastAge;
+    // output.passedMars = ages.ageMars - pastAge;
+    // output.passedJupiter = ages.ageJupiter - pastAge;
     return output;
   }
 }

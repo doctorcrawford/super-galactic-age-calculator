@@ -7,6 +7,9 @@ export default class Person {
     this.dob = new Date(dob);
   }
 
+  // twoDecimals(age, planetYear) {
+  //   parseFloat(age / planetYear).toFixed(2);
+  // }
 
   getAges() {
     const output = {};
@@ -23,10 +26,7 @@ export default class Person {
     const output = {};
     const ages = this.getAges();
     output.passedEarth = ages.ageEarth - pastAge;
-    // output.passedMercury = ages.ageMercury - pastAge;
-    // output.passedVenus = ages.ageVenus - pastAge;
-    // output.passedMars = ages.ageMars - pastAge;
-    // output.passedJupiter = ages.ageJupiter - pastAge;
+ 
     return output;
   }
 }

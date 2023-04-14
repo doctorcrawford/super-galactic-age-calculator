@@ -11,6 +11,7 @@ describe('Person', () => {
     ages = {};
     ages = billy.getAges();
     passedAges = {};
+    passedAges = billy.getYearsPassed(10);
   });
   
   test('should correctly create a Person object with their name and date of birth', () => {
@@ -34,15 +35,13 @@ describe('Person', () => {
   });
 
   test('should correctly calculate the years passed from the inputted age to today', () => {
-    passedAges = billy.getYearsPassed(10);
     expect(passedAges.passedEarth).toEqual(22);
   });
 
-  // test('should correctly calculate the years passed from the inputted age to today', () => {
-  //   passedAges = billy.getYearsPassed(ages.ageEarth, 10);
-  //   expect(passedAges.passedMercury).toEqual(22);
-  //   expect(passedAges.passedVenus).toEqual(22);
-  //   expect(passedAges.passedMars).toEqual(22);
-  //   expect(passedAges.passedJupiter).toEqual(22);
-  // });
+  test('should correctly calculate the years passed for all planets from the inputted age to today', () => {
+    expect(passedAges.passedMercury).toEqual(91.67);
+    expect(passedAges.passedVenus).toEqual(35.48);
+    expect(passedAges.passedMars).toEqual(11.7);
+    expect(passedAges.passedJupiter).toEqual(1.85);
+  });
 });

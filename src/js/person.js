@@ -6,5 +6,6 @@ export default class Person {
 
   getSolarYears() {
     this.ageMercury = parseFloat((this.age / .24).toFixed(2));
+
   }
 }
